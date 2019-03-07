@@ -19,7 +19,7 @@ program
       files.forEach(function (file) {
         const src = fs.readFileSync(file).toString("utf-8");
         var count = 0;
-        const result = src.replace(/([+-]?[0-9]+\.?[0-9]*)?rem/g, function (match, contents) {
+        const result = src.replace(/([+-]?[0-9]+\.?[0-9]*)rem/g, function (match, contents) {
           const rem = parseFloat(contents, 10);
           const result = `${rem * coefficient}rem`;
           count++;
